@@ -1,0 +1,181 @@
+
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}Profile page{% endblock %}
+{% block content %}
+
+
+
+
+
+<div class="container">
+    <div class="row">
+       <!-- Here begin Main Content -->
+       <div class="col-md-12">
+          <div class="row">
+             <div class="col-md-12">
+                <div class="blog-post-container">
+                   <div class="box-body">
+                      <form role="form" action="" method="post" enctype="multipart/form-data">
+                         <div class="row">
+                            <!-- text input -->
+                            <div class="form-group col-md-6">
+                               <label>Student's Name</label>
+                               <input type="text" name="student_name" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Class you want to apply for
+                               For example: Class 2015-2016.</label>
+                               <input type="text" name="apply_class" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Name of the school last studied</label>
+                               <input type="text" name="last_school" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Student's Birth Date</label>
+                               <input type="date" name="student_birthday" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Present age</label>
+                               <input type="text" name="present_age" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Father's Name</label>
+                               <input type="text" name="father_name" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Father's occupation</label>
+                               <input type="text" name="father_occupation" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Father's qualification</label>
+                               <input type="text" name="father_qualification" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Mother's Name</label>
+                               <input type="text" name="mother_name" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Mother's occupation</label>
+                               <input type="text" name="mother_occupation" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Mother's qualification</label>
+                               <input type="text" name="mother_qualification" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Income of the Parents per month </label>
+                               <input type="text" name="income" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Address on which communication is to be made </label>
+                               <textarea rows="4" cols="50" name="current_address" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Gender</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>
+                               <input type="radio" name="gender" value="0" checked> Male <br>
+                               </label>
+                               <label>
+                               <input type="radio" name="gender" value="1" > Female<br>
+                               </label>
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Religion</label>
+                               <input type="text" name="religion" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Nationality</label>
+                               <input type="text" name="nationality" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Office Phone</label>
+                               <input type="text" name="office_phone" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Res Phone</label>
+                               <input type="text" name="res_phone" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label>Mobile</label>
+                               <input type="text" name="mobile" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>Is there any brother/sister already studying in this school?
+                               If so, mention his / her name, class and section
+                               </label>
+                               <textarea rows="4" cols="50" name="already_studying" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>Email</label>
+                               <input type="text" name="email" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>Sms service number</label>
+                               <input type="text" name="sms_service" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>Pic Upload</label>
+                               <input type="file" class="form-control" name="image" />
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>Is there any medical information related to the student, that you would like the school to be aware of?</label>
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>
+                               <input type="radio" name="medical_information" value="1" > Yes <br>
+                               </label>
+                               <label>
+                               <input type="radio" name="medical_information" value="0" checked> No<br>
+                               </label>
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>Do you want to request transportation services for the student?</label>
+                            </div>
+                            <div class="form-group col-md-12">
+                               <label>
+                               <input type="radio" name="transportation_service" value="1" > Yes <br>
+                               </label>
+                               <label>
+                               <input type="radio" name="transportation_service" value="0" checked> No<br>
+                               </label>
+                            </div>
+                            <div class="form-group text-center col-md-4 col-md-offset-4">                    
+                               <input type="submit" class="btn btn-sm btn-block btn-primary" name="btnnewsAdd" value="Submit">
+                            </div>
+                            <br>
+                         </div>
+                      </form>
+                   </div>
+                   <!-- /.box-body -->
+                </div>
+                <!-- /.blog-post-container -->
+             </div>
+             <!-- /.col-md-12 -->
+          </div>
+          <!-- /.row -->
+       </div>
+       <!-- /.col-md-8 -->
+       <!-- Here begin Sidebar -->
+       <div class="col-md-4">
+          <div class="widget-main">
+             <div class="widget-inner">
+                <div class="search-form-widget">
+                   <form name="search_form" method="get" action="#" class="search_form">
+                      <input type="text" name="s" placeholder="Type and click enter to search..." title="Type and click enter to search..." class="field_search">
+                   </form>
+                </div>
+             </div>
+             <!-- /.widget-inner -->
+          </div>
+          <!-- /.widget-main -->
+          
+       </div>
+       <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+ </div>
+{% endblock %}

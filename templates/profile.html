@@ -1,0 +1,114 @@
+
+
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}Profile page{% endblock %}
+{% block content %}
+<div class="container">
+  
+<!-- left column -->
+<div class="col-md-12">
+   <!-- general form elements -->
+   <div class="box box-info">
+      <div class="box-header with-border">
+         <h3 class="box-title">Profile</h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form role="form" method="POST" action= {% url 'profile_update' %} enctype=multipart/form-data >
+         {% csrf_token %}
+
+         {% for message in messages %}
+                        <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+         <div class="box-body col-md-12">
+
+            <div class="form-group col-md-6">
+               <label for="exampleInputEmail1">First name:</label>
+               <input type="text"
+                               class="form-control"
+                               name="first_name"
+                               id="first_name"
+                               placeholder="First name:"
+                               value={{user.first_name}}
+                               >
+            </div>
+
+            <div class="form-group col-md-6">
+               <label for="exampleInputEmail1">Last name:</label>
+               <input type="text"
+                               class="form-control"
+                               name="last_name"
+                               id="last_name"
+                               placeholder="Last name:"
+                               value={{user.last_name}}
+                               >
+            </div>
+
+            <div class="form-group col-md-6">
+               <label for="exampleInputEmail1">Email address</label>
+               <input type="email"
+                               class="form-control"
+                               name="email"
+                               id="email"
+                               placeholder="Email ID"
+                               readonly
+                               value={{user.email}}
+                               >
+            </div>
+
+            <div class="form-group col-md-6">
+               <label for="exampleInputEmail1">User name</label>
+               <input type="text"
+                               class="form-control"
+                               name="username"
+                               id="username"
+                               placeholder="User name:"
+                               readonly
+                               value={{user.username}}
+                               >
+            </div>
+
+
+            <div class="form-group col-md-6">
+               <label for="exampleInputPassword1">Password</label>
+               <input type="password"
+                               class="form-control"
+                               name="password"
+                               id="password"
+                               placeholder="FIll only if you want to change Password"
+                               >
+            </div>
+            <div class="form-group col-md-6">
+               <label for="exampleInputFile">Profile Pic</label>
+               <input type="file" 
+               id="exampleInputFile"
+               name="profile_pic"
+               >
+               {% comment %} <p class="help-block">Example block-level help text here.</p> {% endcomment %}
+            </div>
+
+
+           
+         </div>
+         <!-- /.box-body -->
+         <div class="box-footer">
+            <button type="submit" class="btn btn-info pull-right">Update</button>
+         </div>
+      </form>
+   </div>
+   <!-- /.box -->
+  
+
+</div>
+<!--/.col (left) -->
+
+   
+</div>
+{% endblock %}
+

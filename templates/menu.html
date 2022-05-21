@@ -1,0 +1,281 @@
+{% load static %}
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+
+                {% if user.profile_pic == "" %}
+                <img src="{% static 'img/user_pic.png' %}"
+                     class="img-circle"
+                     alt="User Image">
+
+                     {% else %}
+                     <img src="media/{{user.profile_pic}}"
+                     class="img-circle"
+                     alt="User Image">
+                     {% endif %}
+
+
+
+
+            </div>
+            <div class="pull-left info">
+                <p>
+                    {{user.first_name }} {{user.last_name}}
+                </p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Student Information</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Student Details</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Student Admission</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-pie-chart"></i>
+                  <span>Teacher</span>
+                  <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                  <li>
+                      <a href=""><i class="fa fa-circle-o"></i> Create Teacher</a>
+                  </li>
+                  <li>
+                      <a href=""><i class="fa fa-circle-o"></i> Manage Teacher</a>
+                  </li>
+              </ul>
+          </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Fees Collection</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Collect fees</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Search Due payment</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Fees Group</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Fees Type</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Fees Discount List</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Income</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Add Income</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Search Income</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Income Head</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-pie-chart"></i>
+                  <span>Class</span>
+                  <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                  <li>
+                      <a href=""><i class="fa fa-circle-o"></i> Create Class</a>
+                  </li>
+                  <li>
+                      <a href=""><i class="fa fa-circle-o"></i> Manage Class</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="treeview">
+            <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Section</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href=""><i class="fa fa-circle-o"></i> Create Section</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-circle-o"></i> Manage Section</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>Group</span>
+              <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+              <li>
+                  <a href=""><i class="fa fa-circle-o"></i> Create Group</a>
+              </li>
+              <li>
+                  <a href=""><i class="fa fa-circle-o"></i> Manage Group</a>
+              </li>
+          </ul>
+      </li>
+
+
+      <li class="treeview">
+        <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Subject</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li>
+                <a href=""><i class="fa fa-circle-o"></i> Create Subject</a>
+            </li>
+            <li>
+                <a href=""><i class="fa fa-circle-o"></i> Manage Subject</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="treeview">
+      <a href="#">
+          <i class="fa fa-pie-chart"></i>
+          <span>Routine</span>
+          <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu">
+          <li>
+              <a href=""><i class="fa fa-circle-o"></i> Create Routine</a>
+          </li>
+          <li>
+              <a href=""><i class="fa fa-circle-o"></i> Manage Routine</a>
+          </li>
+      </ul>
+  </li>
+
+  <li class="treeview">
+    <a href="#">
+        <i class="fa fa-pie-chart"></i>
+        <span>Notice</span>
+        <i class="fa fa-angle-left pull-right"></i>
+    </a>
+    <ul class="treeview-menu">
+        <li>
+            <a href=""><i class="fa fa-circle-o"></i> Create Notice</a>
+        </li>
+        <li>
+            <a href=""><i class="fa fa-circle-o"></i> Manage Notice</a>
+        </li>
+    </ul>
+</li>
+
+<li class="treeview">
+  <a href="#">
+      <i class="fa fa-pie-chart"></i>
+      <span>Branch</span>
+      <i class="fa fa-angle-left pull-right"></i>
+  </a>
+  <ul class="treeview-menu">
+      <li>
+          <a href=""><i class="fa fa-circle-o"></i> Create Branch</a>
+      </li>
+      <li>
+          <a href=""><i class="fa fa-circle-o"></i> Manage Branch</a>
+      </li>
+  </ul>
+</li>
+
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Expenses</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Add Expenses</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Search Expenses</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Expenses Head</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Attendance</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Student Attendance </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>System Settings</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> General Setting </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Session Setting </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> Notification  Setting </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i> User Setting </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
